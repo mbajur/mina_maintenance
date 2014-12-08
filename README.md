@@ -7,6 +7,10 @@ Maintenance Page Support For [Mina](http://nadarei.co/mina). Heavily inspired by
 
     gem install mina_maintenance
     
+And require mina_maintenance tasks in your `deploy.rb` file:
+
+    require 'mina_maintenance/tasks'
+    
 ## Usage
 
 Before using the maintenance tasks, you need to configure your webserver. How you do this depends on how your server is configured, but the following examples should help you on your way.
@@ -52,10 +56,6 @@ RewriteCond /var/www/domain.com/shared/public/system/maintenance.html !-f
 RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_FILENAME} !-f
 RewriteRule ^/(.*)$ balancer://unicornserver%{REQUEST_URI} [P,QSA,L]
 ```
-
-## Usage example
-
-    require 'mina_maintenance/tasks'
 
 ## Available Tasks
 
