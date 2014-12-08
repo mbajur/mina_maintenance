@@ -1,7 +1,7 @@
 mina_maintenance <a href="http://badge.fury.io/rb/mina_maintenance"><img src="https://badge.fury.io/rb/mina_maintenance.svg" alt="Gem Version" height="18"></a>
 ============
 
-Maintenance Page Support For [Mina](http://nadarei.co/mina)
+Maintenance Page Support For [Mina](http://nadarei.co/mina). Heavily inspired by [Capistrano::Maintenance](https://github.com/capistrano/maintenance)
 
 ## Installation
 
