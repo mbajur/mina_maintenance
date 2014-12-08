@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Mike Bajur"]
   s.email       = ["mbajur@gmail.com"]
   s.homepage    = "https://github.com/mbajur/mina_maintenance"
-  s.summary     = "Mina bindings for Slack"
-  s.description = "Adds tasks to aid in the Slack notifications."
+  s.summary     = "Maintenance Page Support For Mina"
+  s.description = "Maintenance Page Support For Mina"
 
   s.files = `git ls-files`.split("\n")
   s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
