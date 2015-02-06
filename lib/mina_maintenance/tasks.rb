@@ -11,9 +11,9 @@ set_default :maintenance_template, File.join(File.expand_path('../templates', __
 set_default :maintenance_basename, 'maintenance'
 
 # ### maintenance_path
-# Sets a path to the server's mainenance file on server.
-# Default: /public/system/
-set_default :maintenance_path, '/public/system/'
+# Sets a path to the server's maintenance file on server.
+# Default: public/system
+set_default :maintenance_path, 'public/system'
 
 # ## Control Tasks
 namespace :maintenance do
@@ -24,7 +24,7 @@ namespace :maintenance do
     template = settings.maintenance_template
     result   = File.open(template).read
 
-    rendered_path = "#{deploy_to}/#{shared_path}/#{settings.maintenance_path}"
+    rendered_path = "#{deploy_to}/#{shared_path}/#{settings.maintenance_path}/"
     rendered_name = "#{settings.maintenance_basename}.html"
 
     queue %[
@@ -42,6 +42,6 @@ namespace :maintenance do
   task :off do
     queue %[echo "-----> Turning maintenance mode OFF"]
 
-    queue! %[rm -f #{deploy_to}/#{shared_path}/public/system/#{settings.maintenance_basename}.html]
+    queue! %[rm -f #{deploy_to}/#{shared_path}/#{settings.maintenance_path}/#{settings.maintenance_basename}.html]
   end
 end
